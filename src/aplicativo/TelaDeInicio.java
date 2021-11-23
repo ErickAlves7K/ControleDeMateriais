@@ -8,7 +8,7 @@ public class TelaDeInicio extends JFrame implements ActionListener{
 	
 	private JLabel bemvindo, icone;
 	private JButton entrar;
-	
+	TelaDeLogin login = new TelaDeLogin();	
 	public TelaDeInicio() {
 		setLayout(null);
 		setSize(1080, 720);
@@ -25,18 +25,26 @@ public class TelaDeInicio extends JFrame implements ActionListener{
 		entrar.setForeground(Color.decode("#D8E9A8"));
 		entrar.setBorderPainted(false);
 		entrar.addActionListener(this);
+		entrar.setFocusable(false);
+		entrar.setFont(new Font("Roboto", Font.PLAIN, 24));
 		
 		bemvindo = new JLabel("Bem-Vindo");
 		bemvindo.setBounds(420, 100, 400, 50);
 		bemvindo.setFont(new Font("Roboto", Font.PLAIN, 48));
 		bemvindo.setForeground(Color.decode("#D8E9A8"));
 		
+		icone = new JLabel();
+		icone.setBounds(0, 0, WIDTH, HEIGHT);
+		
 		add(entrar);
 		add(bemvindo);
+		add(icone);
 	}
 	
 	public void actionPerformed(ActionEvent e) {
-		
+		if(e.getSource()==entrar) {
+			
+		}
 	}
 
 	public static void main(String[] args) {
